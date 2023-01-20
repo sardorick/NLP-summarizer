@@ -63,12 +63,13 @@ def summarizer():
                 original_text = text_from_pdf(path_pdf)
 
                 # add to the database
-                new_data = Database(doc_path='path_pdf')
+                """new_data = Database(doc_path='path_pdf')
                 try:
                     db.session.add(new_data)
                     db.session.commit()
                 except:
                     return "Couldn't add path to database"
+                    """
             
             elif filename.endswith('.png') or filename.endswith('.jpg'):
                 pdf_file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))

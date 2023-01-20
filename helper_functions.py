@@ -29,11 +29,11 @@ def text_from_image(path_to_image):
 # Text from pdf
 def text_from_pdf(path):
     file = open(path, 'rb')
-    pdfdoc = PyPDF2.PdfFileReader(file)
-    number_of_pages = pdfdoc.getNumPages()
+    pdfdoc = PyPDF2.PdfReader(file)
+    number_of_pages = len(pdfdoc.pages)
     full_content = ''
     for i in range(number_of_pages):
-        page_content = pdfdoc.getPage(i).extractText()
+        page_content = pdfdoc.pages[i].extract_text()
         full_content = full_content + page_content + ' '
     return full_content
 
