@@ -1,0 +1,481 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Summarizer</h1>
+
+    <div class="row mt-2">
+        <div class="col-sm-1">YOU : </div>
+        <div class="col-sm-11">
+            <div>
+                <form action="/summarizer" method="post" class="col-sm-10">
+                    <input type="text" name="original_text" autofocus class="col-sm-10">
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </div>
+    </div>  
+
+    
+    <section class="bg-dark text-light p-5  text-center text-sm-start"> <!-- check the class here later p-lg-0  -->
+        <div class="container">
+            <div class="d-sm-flex">   <!-- check the class here later  -->
+
+                <div class="m-5">
+                    <h1 class="text-warning bold"> Problem Definition  </h1>
+                    <P class="lead my-4">
+                        One of the  <span class="text-warning bold"> most difficult tasks in research is 
+                            reading and reviewing </span> long list of published scientific papers.
+                        This task can be daunting as readers spend many hours reading most papers only 
+                        to realize that the paper is unrelated to the topic of interest. 
+                        This is also true of people who read several texts, among them are books, 
+                        blogs, online information, and others. 
+                        The pain of going through all these can be eased by finding a model 
+                        that  <span class="text-warning bold"> summarizers</span> the content of any 
+                        document, where the user will only read the summary of the content. 
+                    </P>
+                </div>
+
+
+                <div class="m-5">
+                    <h1 class="text-warning bold"> Aims of this Project   </h1>
+                    <P class="lead my-4">
+                        <div > 1.	Summarize a typed text, or a “copy and paste” text. </div>
+                        <div> 2.	Summarize a pdf document once uploaded. </div>
+                        <div> 3.	Summarize a website document just by providing the url-link </div>
+                        <div> 4.	Extract and summarize text from an image </div>
+
+                         long list of published scientific papers.
+                        This task can be daunting as readers spend many hours reading most papers only 
+                        to realize that the paper is unrelated to the topic of interest. 
+                        This is also true of people who read several texts, among them are books, 
+                        blogs, online information, and others. 
+                        The pain of going through all these can be eased by finding a model 
+                        that  <span class="text-warning bold"> summarizers</span> the content of any 
+                        document, where the user will only read the summary of the content. 
+                    </P>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECOND CONTAINER  - SIGNING UP -->
+
+    <section class="bg-dark text-light p-5">
+        <div class="container">
+
+
+
+            <div class="p-5">
+                <h1 class="text-warning bold text-center"> Type or paste your document here </h1>
+                <div>
+                    <form action="/summarizer" method="post" class="col-sm-10">
+                        <input type="text" name="original_text" autofocus class="col-sm-10">
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
+            </div>
+
+            <div class="input-group p-5">
+                <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                    <option selected>Choose...</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </select>
+                <button class="btn btn-outline-secondary" type="button">Button</button>
+            </div>
+
+            <div class="p-2">
+                <label for="formFileLg" class="form-label text-warning"> <h1>Upload image file here </h1> </label>
+                <input class="form-control form-control-lg" id="formFileLg" type="file">
+                <!-- <input type="submit" value="Send"> -->
+            </div>
+
+            <div class="p-2">
+                <label for="formFileLg" class="form-label text-warning"> <h1>Upload pdf document here </h1> </label>
+                <input class="form-control form-control-lg" id="formFileLg" type="file">
+                <!-- <input type="submit" value="Send"> -->
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+              </div>
+
+        </div>
+    </section>
+
+
+    <!-- THIRD SECTION - PRODUCTS   -->
+
+        <section id="instructors" class="p-5 bg-primary">
+            <div class="container">
+                <h1 class="text-center text-white"> OUR PRODUCTS </h1>
+                <p class="lead text-center text-white mb-5">
+                    Below are some of the available products
+                </p>
+                <div class="row g-4">
+    
+                    <!-- Product 1  -->
+    
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <img src="img/img_3.jpeg" class="rounded-circle mb-3" alt="">
+                                <h3 class="card-title mb-3">Product Name</h3>
+                                <p class="card-text">
+                                    Give a short description about the product. 
+                                    The description should not exceed 500 characters
+                                </p>
+                                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+    
+                     <!-- Product 2  -->
+    
+                     <div class="col-md-6 col-lg-3">
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <img src="img/img_3.jpeg" class="rounded-circle mb-3" alt="">
+                                <h3 class="card-title mb-3">Product Name</h3>
+                                <p class="card-text">
+                                    Give a short description about the product. 
+                                    The description should not exceed 500 characters
+                                </p>
+                                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Product 3  -->
+    
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <img src="img/img_3.jpeg" class="rounded-circle mb-3" alt="">
+                                <h3 class="card-title mb-3">Product Name</h3>
+                                <p class="card-text">
+                                    Give a short description about the product. 
+                                    The description should not exceed 500 characters
+                                </p>
+                                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Product 4  -->
+    
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <img src="img/img_3.jpeg" class="rounded-circle mb-3" alt="">
+                                <h3 class="card-title mb-3">Product Name</h3>
+                                <p class="card-text">
+                                    Give a short description about the product. 
+                                    The description should not exceed 500 characters
+                                </p>
+                                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                            </div>
+                        </div>
+                    </div>                  
+
+                </div>
+            </div>
+        </section>
+
+
+    <!-- FOURTH CONTAINER  - MORE PRODUCTS  -->
+
+    <section class="p-5">
+        <div class="container">
+            <div class="row text-center g-5">
+
+                <!-- product 5 -->
+
+                <div class="col-md">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <img src="img/img_3.jpeg" class="rounded-circle mb-3" alt="">
+                            </div>
+                            <div>
+
+                                <h3 class="card-title mb-3">
+                                    More Products  
+                                </h3>
+                                <p class="card-text">
+                                    Descriptions of other products your will load  
+                                </p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- product 6 -->
+
+                <div class="col-md">
+                    <div class="card bg-secondary text-light">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <img src="img/img_3.jpeg" class="rounded-circle mb-3" alt="">
+                            </div>
+                            <div>
+                                <h3 class="card-title mb-3">
+                                    More Products 
+                                </h3>
+                                <p class="card-text">
+                                    Descriptions of other products your will load 
+                                </p>
+                                <a href="#" class="btn btn-dark">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- product 5 -->
+
+                <div class="col-md">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <img src="img/img_3.jpeg" class="rounded-circle mb-3" alt="">
+                            </div>
+                            <div>
+
+                                <h3 class="card-title mb-3">
+                                    More Products  
+                                </h3>
+                                <p class="card-text">
+                                    Descriptions of other products your will load  
+                                </p>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- product 6 -->
+
+                <div class="col-md">
+                    <div class="card bg-secondary text-light">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <img src="img/img_3.jpeg" class="rounded-circle mb-3" alt="">
+                            </div>
+                            <div>
+                                <h3 class="card-title mb-3">
+                                    More Products 
+                                </h3>
+                                <p class="card-text">
+                                    Descriptions of other products your will load 
+                                </p>
+                                <a href="#" class="btn btn-dark">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOURTH CONTAINER  -->
+
+    <section id="product" class="p-5">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md">
+
+                    
+                    <img src="img/img_1.jpeg" class="img-fluid" alt="">
+                </div>
+                <div class="col-md p-5">  
+                    <h2>Check the Products</h2>
+                    <p class="lead">
+                        An atom is the smallest unit of ordinary 
+                    </p>
+                    <p class="lead">
+                        An atom is the smallest unit of ordinary matter that forms a chemical element. 
+                        Every solid, liquid, gas, and plasma is composed of neutral or ionized atoms.   
+                    </p>
+                    <a href="#" class="btn btn-light mt-3">
+                        <i class="bi bi-chevron-right"></i> Read more 
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FIFTH CONTAINER  -->
+
+    <section id="product" class="p-5 bg-dark text-light">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md p-5">  
+                    <h2>Learn More</h2>
+                    <p class="lead">
+                        An atom is the smallest unit of ordinary matter that forms a chemical element. 
+
+                    </p>
+                    <p class="lead">
+                        An atom is the smallest unit of ordinary matter that forms a chemical element. 
+                        Every solid, liquid, gas, and plasma is composed of neutral or ionized atoms. .  
+                    </p>
+                    <a href="#" class="btn btn-light mt-3">
+                        <i class="bi bi-chevron-right"></i> Read more 
+                    </a>
+                </div>
+                <div class="col-md">
+                    <img src="img/img_1.jpeg" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SIXTH SECTION - FREQUENTLY ASKED QUESTIONS  -->
+
+    <section id="questions" class="p-5">
+        <div class="container">
+            <h2 class="text-center mb-4">
+                Frequently Asked Questions 
+            </h2>
+            <div class="accordion accordion-flush" id="questions">
+
+                <!-- Question 1 -->
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" >
+                        <button class="accordion-button collapsed" 
+                                type="button" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#question-one">
+                            What is an atom?
+                        </button>
+                    </h2>
+                    <div id="question-one" 
+                         class="accordion-collapse collapse" 
+                         aria-labelledby="flush-headingOne"                          
+                         data-bs-parent="#questions">
+                        <div class="accordion-body">
+                            An atom is the smallest unit of ordinare due to quantum effects.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" >
+                        <button class="accordion-button collapsed" 
+                                type="button" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#question-two">
+                            Where can I find an atom? 
+                        </button>
+                    </h2>
+                    <div id="question-two" 
+                         class="accordion-collapse collapse" 
+                         aria-labelledby="flush-headingOne"                          
+                         data-bs-parent="#questions">
+                        <div class="accordion-body">
+                            An atom is the smallest unit of ordinary ssible due to quantum effects.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" >
+                        <button class="accordion-button collapsed" 
+                                type="button" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#question-three">
+                            How many types of atoms are there?
+                        </button>
+                    </h2>
+                    <div id="question-three" 
+                         class="accordion-collapse collapse" 
+                         aria-labelledby="flush-headingOne"                          
+                         data-bs-parent="#questions">
+                        <div class="accordion-body">
+                            An atom is the smallest unit of ordinary mssible due to quantum effects.
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </section>
+
+
+
+    <!-- EIGHTH SECTION - FREQUENTLY ASKED QUESTIONS  --> 
+
+    <section class="p-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md">
+                    <h2 class="text-center mb-4">Contact Information</h2>
+                    <ul class="list-group list-group-flush-lead">
+                        <li class="list-group-item">
+                            <span class="fw-bold">Address |</span> Joensuu
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Email |</span> zorvepeter28@gmail.com
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Phone No. |</span> +358 417 000000000
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Location |</span> Joensuu
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md">
+                    <div">
+                    <img src="img/img_1.jpeg" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER  -->
+
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+        <div class="container">
+            <p class="lead">Copyright</p>
+            <a href="" class="postision-absolute bottom-0 end-0 p-5">
+                <i class="bi bi-arrow-up-circle h1"></i>
+            </a>
+        </div>
+
+    </footer>
+
+
+
+{% endblock %}

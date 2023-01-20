@@ -1,0 +1,25 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<section class="bg-light text-dark p-2  text-center text-sm-start">
+    <div class="container">
+        <h1>Database</h1>
+    </div>
+    <div>
+        {{ histories }}
+        {% for history in histories %}
+            <h4> history.data_type </h4> 
+        {% endfor %}
+    </div>
+    
+</section>
+
+                    
+
+
+{% endblock %}
+
+

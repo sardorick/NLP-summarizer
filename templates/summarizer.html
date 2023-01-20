@@ -1,0 +1,174 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+    <!-- <h1>Home Page</h1> -->
+    <section id="product" class="bg-primary text-light p-5  text-center text-sm-start">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md p-5">  
+                    
+
+                    <form action="/summarizer" method="POST", enctype="multipart/form-data">
+
+                        <h1>Paste or Upload</h1>
+
+                        <div class="mb-3">
+                            <br>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter of paste the url link here" name="url_link">
+                        </div>
+
+                        <div class="mb-3">
+                            <br>
+                            <label for="formFile" class="form-label"> Upload File Here <br>  .pdf, .png, .jpg, .jpeg, .gif </label>
+                            <input type="file" class="form-control"  id="formFile" placeholder="Upload pdf document" name="pdf_file">
+                        </div>
+                        
+
+                        <!-- <div class="mb-3">
+                            <br>
+                            <label for="formFile" class="form-label">Upload ann IMAGE file here</label>
+                            <input type="file" class="form-control"  id="formFile" placeholder="Upload pdf document" name="image_file">
+                        </div> -->
+
+                        <div class="mb-3">
+                            <br>
+                            <label for="exampleFormControlInput1" class="form-label">Type of paste document here</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Type or paste document here" name="typed_file"></textarea>
+                            <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Type or paste document here" name="typed_file"></textarea> -->
+                        </div>
+
+                        <div class="mb-3">
+                            <br>
+                            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Enter the summary percentage" name="percentage">
+                            <br>
+                        </div>
+
+                        <button type="submit" class="btn btn-warning"> Submit
+
+                        </button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section id="questions" class="bg-light text-dark p-5  text-center text-sm-start">
+        <div class="container">
+            <h1 class="text mb-4 text-danger">
+                RESULTS  
+            </h1>
+            <div class="accordion accordion-flush" id="questions">
+
+                <!-- 1st Original Text -->
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" >
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-one">
+                            <h2 class="text-primary">Original Text</h2>  
+                        </button>
+                    </h2>
+                    <div id="question-one"  class="accordion-collapse collapse"  aria-labelledby="flush-headingOne" data-bs-parent="#questions">
+                        <div class="accordion-body text-light bg-primary">  {{ original_text }}  </div>
+                    </div>
+                </div>
+
+
+                <!-- 2nd Summary by Frequency Count  -->
+
+                <!-- <div class="accordion-item"> 
+                    <h2 class="accordion-header" >
+                        <button class="accordion-button collapsed"  type="button" data-bs-toggle="collapse" data-bs-target="#question-2">
+                            <h2 class="text-primary"> Abstractive Summary  </h2>
+                        </button>
+                    </h2>
+                    <div id="question-2"  class="accordion-collapse collapse"  aria-labelledby="flush-headingOne" data-bs-parent="#questions">
+                        <div class="accordion-body text-light bg-primary">  {{ summary_abst }} </div>
+                    </div>
+                </div> -->
+
+                <!-- 3nd Summary by Frequency Count  -->
+
+                <div class="accordion-item"> 
+                    <h2 class="accordion-header" >
+                        <button class="accordion-button collapsed"  type="button"  data-bs-toggle="collapse" data-bs-target="#question-six">
+                            <h2 class="text-primary"> View WordCloud Image  </h2>
+                        </button>
+                    </h2>
+                    <div id="question-six"  class="accordion-collapse collapse"  aria-labelledby="flush-headingOne"  data-bs-parent="#questions">
+                        <div>
+                            <!-- <img class="img-fluid w-50 d-none d-sm-block" src='static/wordcloud.png?{{time_}}' alt=""> -->
+                            <img class="img-fluid" src='static/wordcloud.png?{{time_}}' alt="">
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="accordion-item"> 
+                    <h2 class="accordion-header" >
+                        <button class="accordion-button collapsed"  type="button" data-bs-toggle="collapse" data-bs-target="#question-two">
+                            <h2 class="text-primary"> Summary Using Frequency Count </h2>
+                        </button>
+                    </h2>
+                    <div id="question-two"  class="accordion-collapse collapse"  aria-labelledby="flush-headingOne" data-bs-parent="#questions">
+                        <div class="accordion-body text-light bg-primary">  {{ summary_freq }} </div>
+                    </div>
+                </div>
+
+                <!-- 4rd Summary by Frequency Count  -->
+
+                <div class="accordion-item"> 
+                    <h2 class="accordion-header" >
+                        <button class="accordion-button collapsed"  type="button" data-bs-toggle="collapse" data-bs-target="#question-three">
+                            <h2 class="text-primary"> Summary Using Luhn Algorithm </h2>
+                        </button>
+                    </h2>
+                    <div id="question-three"  class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#questions">
+                        <div class="accordion-body text-light bg-primary">  {{ summary_luhn }} </div>
+                    </div>
+                </div>
+
+                
+                <!-- 5th Summary by Frequency Count  -->
+
+                <!-- <div class="accordion-item"> 
+                    <h2 class="accordion-header" >
+                        <button class="accordion-button collapsed"  type="button"  data-bs-toggle="collapse" data-bs-target="#question-four">
+                            <h2 class="text-primary"> Summary Using Cosine - Similarity </h2>
+                        </button>
+                    </h2>
+                    <div id="question-four"  class="accordion-collapse collapse"  aria-labelledby="flush-headingOne"  data-bs-parent="#questions">
+                        <div class="accordion-body text-light bg-primary">  {{ summary_cosn }} </div>
+                    </div>
+                </div> -->
+
+
+                <!-- 6th Plot Image  -->
+
+
+              </div>
+        </div>
+    </section>
+
+    <section class="bg-primary text-light p-5  text-center text-sm-start"> <!-- check the class here later p-lg-0  -->
+        <div class="container">
+            <div class="d-sm-flex">   <!-- check the class here later  -->
+                <div>
+
+
+                </div>
+                <img class="img-fluid w-50 d-none d-sm-block h-100" src="#" alt="">
+            </div>
+        </div>
+    </section>
+{% endblock %}
