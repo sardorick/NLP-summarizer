@@ -10,9 +10,13 @@ import PyPDF2
 from PIL import Image
 import pytesseract
 from wordcloud import WordCloud
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
+
 nltk.download('stopwords')
+nltk.download('punkt')
 
 stopwords = nltk.corpus.stopwords.words('english')
 

@@ -91,15 +91,16 @@ def summarizer():
             except:
                 flash('Try again later, or enter a valid url-link')
                 return redirect(url_for('summarizer'))
-
-            if typed_file:
-                original_text = typed_file
-                plot_wordcloud(original_text)
-                summary_freq = summarize_by_freq(original_text, percentage)
-                summary_luhn = summarize_by_luhn(original_text, percentage)
                 """
 
-        return render_template('summarizer.html', original_text=original_text, summary_freq=summary_freq, summary_luhn=summary_luhn, time_=time_)
+        if typed_file:
+            original_text = typed_file
+            plot_wordcloud(original_text)
+            summary_freq = summarize_by_freq(original_text, percentage)
+            summary_luhn = summarize_by_luhn(original_text, percentage)
+                
+
+    return render_template('summarizer.html', original_text=original_text, summary_freq=summary_freq, summary_luhn=summary_luhn, time_=time_)
 
 if __name__ == '__main__':
     app.run(debug=True)
