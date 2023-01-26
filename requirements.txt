@@ -1,0 +1,15 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: osx-arm64
+flask=2.2.2=py310hca03da5_0
+flask-sqlalchemy=3.0.2=pyhd8ed1ab_0
+jinja2=3.1.2=py310hca03da5_0
+matplotlib=3.5.2=py310hca03da5_0
+nltk=3.7=pyhd3eb1b0_0
+numpy=1.21.5=py310h220015d_3
+pypdf2=2.11.1=pyhd8ed1ab_0
+pytesseract=0.3.10=pyhd8ed1ab_0
+sqlalchemy=1.4.32=py310h1a28f6b_0
+sqlite=3.40.1=h7a7dc30_0
+wordcloud=1.8.2.2=py310h8e9501a_1
+zlib=1.2.13=h03a7124_4
