@@ -4,7 +4,7 @@ import os
 from werkzeug.utils import secure_filename
 from time import time
 from datetime import datetime
-from helper_functions import *
+from utils import *
 
 app = Flask(__name__)
 app.secret_key = 'secret key'
