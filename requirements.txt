@@ -11,4 +11,3 @@ pypdf2
 pytesseract
 sqlalchemy
 wordcloud
-zlib
