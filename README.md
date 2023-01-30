@@ -29,7 +29,7 @@ Project is created with:
 
 ## Setup
 
-To access the project, I have prepared a Streamlit interface: [Streamlit](https://sardorick-bw1-yelp-database-streamlit-app-sardorbek-dmqnww.streamlit.app/). You can access it and use the functions of the app without needing to launch the whole web app itself. 
+To access the project, I have prepared a Streamlit interface: [Streamlit](https://sardorick-nlp-summarizer-streamlit-app-r7bvd4.streamlit.app/). You can access it and use the functions of the app without needing to launch the whole web app itself. 
 
 In order to access the web application, go to the directory and run the following code on the terminal:
 ```python app.py```

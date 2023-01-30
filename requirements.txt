@@ -11,3 +11,4 @@ pypdf2
 pytesseract
 sqlalchemy
 wordcloud
+streamlit
