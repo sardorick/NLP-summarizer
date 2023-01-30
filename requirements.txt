@@ -10,6 +10,5 @@ numpy
 pypdf2
 pytesseract
 sqlalchemy
-sqlite
 wordcloud
 zlib
