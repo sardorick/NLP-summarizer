@@ -42,4 +42,4 @@ I am planning to implement some features that include being able to summarize te
 
 ## Contact
 
-Project Link: [https://github.com/sardorick/NLP-summarizer](https://github.com/sardorick/NLP-summarizer)
+Project Link: [https://github.com/sardorick/NLP-summarizer](https://github.com/sardorick/NLP-summarizer)    
